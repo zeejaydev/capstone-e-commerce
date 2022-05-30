@@ -1,0 +1,130 @@
+.categories{
+    padding-top: 30px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+.categories-container{
+    display: grid;
+    /* grid-template-columns: 153px 369px 254px 250px; */
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    grid-template-rows: auto;
+    grid-template-areas:
+        "mens mens women acc"
+        "mens mens women acc"
+        "mens mens women kids"
+        "mens mens women kids";
+    justify-content: center;
+    gap: 15px;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+.men{
+    grid-area: mens;
+    position: relative;
+}
+.women{
+    position: relative;
+    grid-area: women;
+}
+.accessories{
+    position: relative;
+    grid-area: acc;
+}
+.kids{
+    position: relative;
+    grid-area: kids;
+}
+.cat-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cat-button{
+    position: absolute;
+    bottom: 21px;
+    left: 20px;
+    background-color: #fff;
+    width: 160px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.deal{
+    min-height: 40vh;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%),url('../assets/images/deal.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 5px;
+}
+.email-capture{
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.email-capture h1 {
+    font-size: 34px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.email-icon{
+    position: absolute;
+    left: 5px;
+    top: 9px;
+}
+.email-input{
+    margin: 1.2em 0;
+    position: relative;
+}
+.email-capture-input{
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    flex: 1 1;
+    padding: 10px 31px;
+    border-radius: 4px;
+    width: 300px;
+}
+.subscribe-btn{
+    background-color: #23A6F0;
+    padding: 10px;
+    width: 50%;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+@media only screen and (max-width: 768px) {
+    .categories-container {
+        gap: 2px;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 160px));
+    }
+    .cat-button{
+        width: 130px;
+        height: 28px;
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 645px) {
+    .cat-button{
+        width: 81px;
+        height: 28px;
+        font-size: 11px;
+    }
+    .categories-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 350px) {
+    input{
+        width: auto;
+    }
+}

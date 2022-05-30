@@ -1,0 +1,218 @@
+[
+    {
+        "_id" : 1,
+        "title" : "yellow shirt",
+        "image" : "https://zeejaydev.com/prods/men/1.png",
+        "desc" : "Lorem Ipsum is simply dummy text of the printing",
+        "price" : "13.00",
+        "categorie" : "men"
+    },
+    {
+        "_id" : 2,
+        "title" : "navy shirt",
+        "image" : "https://zeejaydev.com/prods/men/10.png",
+        "desc" : "Lorem Ipsum is simply dummy text of the printing",
+        "price" : "13.50",
+        "categorie" : "men"
+    }
+    ,{
+        "_id" : 3,
+        "title" : "yellow jacket",
+        "image" : "https://zeejaydev.com/prods/men/2.png",
+        "desc" : "Lorem Ipsum is simply dummy text of the printing",
+        "price" : "20.00",
+        "categorie" : "men"
+    }
+    ,{
+        "_id" : 4,
+        "title" : "white coat",
+        "image" : "https://zeejaydev.com/prods/men/5.png",
+        "desc" : "Lorem Ipsum is simply dummy text of the printing",
+        "price" : "50.00",
+        "categorie" : "men"
+    }
+    ,{
+        "_id" : 5,
+        "title" : "yellow vest",
+        "image" : "https://zeejaydev.com/prods/men/6.png",
+        "desc" : "Lorem Ipsum is simply dummy text of the printing",
+        "price" : "30.00",
+        "categorie" : "men"
+    }
+    ,{
+        "_id" : 6,
+        "title" : "white shirt",
+        "image" : "https://zeejaydev.com/prods/men/7.png",
+        "desc" : "Lorem Ipsum is simply dummy text of the printing",
+        "price" : "29.00",
+        "categorie" : "men"
+    }
+    ,{
+        "_id" : 7,
+        "title" : "pink hoodie",
+        "image" : "https://zeejaydev.com/prods/men/9.png",
+        "desc" : "Lorem Ipsum is simply dummy text of the printing",
+        "price" : "39.00",
+        "categorie" : "men"
+    }
+    ,{
+        "_id" : 8,
+        "title" : "draped dress",
+        "image" : "https://zeejaydev.com/prods/women/1.png",
+        "desc" : "Lorem Ipsum is simply dummy text of the printing",
+        "price" : "20.00",
+        "categorie" : "women"
+    }
+    ,{
+        "_id" : 9,
+        "title" : "fitted tank top",
+        "image" : "https://zeejaydev.com/prods/women/2.jpeg",
+        "desc" : "Lorem Ipsum is simply dummy text of the printing",
+        "price" : "8.00",
+        "categorie" : "women"
+    }
+    ,{
+        "_id" : 10,
+        "title" : "Cotton T-shirt",
+        "image" : "https://zeejaydev.com/prods/women/3.jpeg",
+        "desc" : "Lorem Ipsum is simply dummy text of the printing",
+        "price" : "11.50",
+        "categorie" : "women"
+    }
+    ,{
+        "_id" : 11,
+        "title" : "High Waist Denim Shorts",
+        "image" : "https://zeejaydev.com/prods/women/4.jpeg",
+        "desc" : "Lorem Ipsum is simply dummy text of the printing",
+        "price" : "20.00",
+        "categorie" : "women"
+    }
+    ,{
+        "_id" : 12,
+        "title" : "Straight High Jeans",
+        "image" : "https://zeejaydev.com/prods/women/5.jpeg",
+        "desc" : "Lorem Ipsum is simply dummy text of the printing",
+        "price" : "24.00",
+        "categorie" : "women"
+    }
+    ,{
+        "_id" : 13,
+        "title" : "One-shoulder Top",
+        "image" : "https://zeejaydev.com/prods/women/6.jpeg",
+        "desc" : "Lorem Ipsum is simply dummy text of the printing",
+        "price" : "12.00",
+        "categorie" : "women"
+    }
+    ,{
+        "_id" : 14,
+        "title" : "green hoodie & pants",
+        "image" : "https://zeejaydev.com/prods/kids/1.jpeg",
+        "desc" : "Lorem Ipsum is simply dummy text of the printing",
+        "price" : "40.00",
+        "categorie" : "kids"
+    }
+    ,{
+        "_id" : 15,
+        "title" : "pink t-shirt",
+        "image" : "https://zeejaydev.com/prods/kids/2.jpeg",
+        "desc" : "Lorem Ipsum is simply dummy text of the printing",
+        "price" : "10.00",
+        "categorie" : "kids"
+    }
+    ,{
+        "_id" : 16,
+        "title" : "black skirt",
+        "image" : "https://zeejaydev.com/prods/kids/3.jpeg",
+        "desc" : "Lorem Ipsum is simply dummy text of the printing",
+        "price" : "15.00",
+        "categorie" : "kids"
+    }
+    ,{
+        "_id" : 17,
+        "title" : "LA white t-shirt",
+        "image" : "https://zeejaydev.com/prods/kids/4.jpeg",
+        "desc" : "Lorem Ipsum is simply dummy text of the printing",
+        "price" : "10.00",
+        "categorie" : "kids"
+    }
+    ,{
+        "_id" : 18,
+        "title" : "green pants",
+        "image" : "https://zeejaydev.com/prods/kids/5.jpeg",
+        "desc" : "Lorem Ipsum is simply dummy text of the printing",
+        "price" : "18.00",
+        "categorie" : "kids"
+    }
+    ,{
+        "_id" : 19,
+        "title" : "graphic t-shirt",
+        "image" : "https://zeejaydev.com/prods/kids/6.jpeg",
+        "desc" : "Lorem Ipsum is simply dummy text of the printing",
+        "price" : "9.00",
+        "categorie" : "kids"
+    }
+    ,{
+        "_id" : 20,
+        "title" : "black hat",
+        "image" : "https://zeejaydev.com/prods/acc/1.jpeg",
+        "desc" : "Lorem Ipsum is simply dummy text of the printing",
+        "price" : "9.00",
+        "categorie" : "accessories"
+    }
+    ,{
+        "_id" : 21,
+        "title" : "sunglasses",
+        "image" : "https://zeejaydev.com/prods/acc/2.jpeg",
+        "desc" : "Lorem Ipsum is simply dummy text of the printing",
+        "price" : "7.00",
+        "categorie" : [ "accessories" , "men" ]
+    }
+    ,{
+        "_id" : 22,
+        "title" : "black belt",
+        "image" : "https://zeejaydev.com/prods/acc/3.jpeg",
+        "desc" : "Lorem Ipsum is simply dummy text of the printing",
+        "price" : "5.00",
+        "categorie" : "accessories"
+    }
+    ,{
+        "_id" : 23,
+        "title" : "bracelets",
+        "image" : "https://zeejaydev.com/prods/acc/4.jpeg",
+        "desc" : "Lorem Ipsum is simply dummy text of the printing",
+        "price" : "3.00",
+        "categorie" : "accessories"
+    }
+    ,{
+        "_id" : 24,
+        "title" : "tote",
+        "image" : "https://zeejaydev.com/prods/acc/5.jpeg",
+        "desc" : "Lorem Ipsum is simply dummy text of the printing",
+        "price" : "25.00",
+        "categorie" : "accessories"
+    }
+    ,{
+        "_id" : 25,
+        "title" : "hand bag",
+        "image" : "https://zeejaydev.com/prods/acc/6.jpeg",
+        "desc" : "Lorem Ipsum is simply dummy text of the printing",
+        "price" : "30.00",
+        "categorie" : "accessories"
+    }
+    ,{
+        "_id" : 26,
+        "title" : "sunglasses",
+        "image" : "https://zeejaydev.com/prods/acc/7.jpeg",
+        "desc" : "Lorem Ipsum is simply dummy text of the printing",
+        "price" : "15.00",
+        "categorie" : [ "accessories","women" ]
+    }
+    ,{
+        "_id" : 27,
+        "title" : "hat",
+        "image" : "https://zeejaydev.com/prods/acc/8.jpeg",
+        "desc" : "Lorem Ipsum is simply dummy text of the printing",
+        "price" : "15.00",
+        "categorie" : [ "accessories","women" ]
+    }
+]
