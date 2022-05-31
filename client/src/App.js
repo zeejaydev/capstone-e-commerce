@@ -5,16 +5,23 @@ import Shop from "./pages/Shop";
 import "./index.css"
 import Footer from "./components/Footer";
 import Product from "./pages/Product";
+import Login from "./pages/Login";
+import { store } from './store'
+import { Provider } from "react-redux"
 function App() {
   return (
     <Router>
-      <NavBar/>
-      <Routes>
-        <Route path="/" element={<Home/>}></Route>
-        <Route path="/shop" element={<Shop/>}></Route>
-        <Route path="/shop/product/:id" element={<Product/>}></Route>
-      </Routes>
-      <Footer/>
+      <Provider store={store}>
+        <NavBar/>
+        <Routes>
+          <Route path="/" element={<Home/>}></Route>
+          <Route path="/shop" element={<Shop/>}></Route>
+          <Route path="/shop/product/:id" element={<Product/>}></Route>
+          <Route path="/admin" element={<Product/>}></Route>
+          <Route path="/login" element={<Login/>}></Route>
+        </Routes>
+        <Footer/>
+      </Provider>
     </Router>
   );
 }

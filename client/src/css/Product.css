@@ -1,0 +1,34 @@
+.product-container{
+    max-width: 1024px;
+    margin: 20px auto;
+
+}
+.product{
+    display: flex;
+    justify-content: flex-start;
+}
+.product-img{
+    position: relative;
+    height: 510px;
+}
+.product-img img{
+    width: 100%;
+    height: 100%;
+}
+.product-info{
+    text-align: left;
+    padding-left: 20px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.product-info button{
+    border: none;
+    background-color: #23A6F0;
+    color: #fff;
+    font-weight: bold;
+    padding: 15px 0;
+    text-transform: uppercase;
+    cursor: pointer;
+}

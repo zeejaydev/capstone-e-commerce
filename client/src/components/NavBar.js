@@ -4,11 +4,13 @@ import { BsCart } from "react-icons/bs";
 import { BiUser, BiMenuAltRight } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
 import { useState, useEffect, useRef } from "react";
+import { useSelector } from "react-redux";
 
 
 const NavBar = ()=>{
     const [ show,setShow ] = useState(false);
     const dropMenu = useRef()
+    const cartItems = useSelector((state) => state.cart.length)
     
     useEffect(() => {
         const checkIfClickedOutside = e => {
@@ -38,8 +40,8 @@ const NavBar = ()=>{
                 </div>
                 <div className='login'>
                     <ul>
-                        <Link to='/'><li><BiUser size={16} /> login / register</li></Link>
-                        <Link to='/'><li><BsCart size={16} /> 1 </li></Link>
+                        <Link to='/login'><li><BiUser size={16} /> login / register</li></Link>
+                        <Link to='/'><li><BsCart size={16} /> {cartItems} </li></Link>
                     </ul>
                 </div>
                 <div className="mobile-toggle">
@@ -52,6 +54,7 @@ const NavBar = ()=>{
                 <ul>
                     <Link to='/' ><li>home</li></Link>
                     <Link to='/shop'><li>shop</li></Link>
+                    <Link to='/login'><li>login / register</li></Link>
                 </ul>
             </div>
         </>

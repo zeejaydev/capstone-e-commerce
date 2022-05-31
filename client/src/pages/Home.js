@@ -1,5 +1,5 @@
 import Slider from "../components/slider/Slider";
-import "./home.css";
+import "../css/Home.css";
 import MenImg from "../assets/images/men.jpg";
 import WomenImg from "../assets/images/women2.jpg";
 import AccImg from "../assets/images/acc.jpg";
