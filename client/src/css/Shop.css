@@ -53,9 +53,6 @@
     align-items: center;
 }
 @media only screen and (max-width: 545px) {
-    .products-container{
-        grid-template-columns: max-content;
-    }
     .product-container {
         max-width: 90vw;
     }
