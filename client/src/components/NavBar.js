@@ -11,7 +11,14 @@ const NavBar = ()=>{
     const [ show,setShow ] = useState(false);
     const dropMenu = useRef()
     const cartItems = useSelector((state) => state.cart.length)
-    
+    const [user,setUser] = useState(null)
+    useEffect(()=>{
+        const id = sessionStorage.getItem('id')
+        if(id){
+            fetch(`/api/getUser/${id}`).then(resp=>resp.json()).then(res=>setUser(res))
+        }
+    },[])
+
     useEffect(() => {
         const checkIfClickedOutside = e => {
             if (show && dropMenu.current && !dropMenu.current.contains(e.target) ) {
@@ -23,6 +30,8 @@ const NavBar = ()=>{
             document.removeEventListener("mousedown", checkIfClickedOutside)
         }
     }, [show])
+
+
 
     return(
         <>
@@ -40,7 +49,7 @@ const NavBar = ()=>{
                 </div>
                 <div className='login'>
                     <ul>
-                        <Link to='/login'><li><BiUser size={16} /> login / register</li></Link>
+                        {user?<li>{user.email}</li>:<Link to='/login'><li><BiUser size={16} /> login / register</li></Link>}
                         <Link to='/'><li><BsCart size={16} /> {cartItems} </li></Link>
                     </ul>
                 </div>

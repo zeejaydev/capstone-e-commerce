@@ -54,7 +54,7 @@ const Shop = () => {
                     <h3>Showing all {prods&&prods.length} results</h3>
                     <div className="filter-container">
                         <select defaultValue={filter?filter:"Choose a categorie"} className="select-cat" onChange={(e)=>setFilter(e.target.value)}>
-                            <option value="Choose a categorie" disabled hidden>Choose a categorie</option>
+                            <option value="Choose a categorie" disabled >Choose a categorie</option>
                             <option value="men">Men</option>
                             <option value="women">Women</option>
                             <option value="kids">Kids</option>

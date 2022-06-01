@@ -15,8 +15,8 @@ const Product = () => {
         .then(data=>setItem(data))
         .catch(e=>console.log(e))
         
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
-    console.log(item)
     return (
         <div className="product-container">
             {item&&item.map((prod,i)=>(<div key={i} className="product">
