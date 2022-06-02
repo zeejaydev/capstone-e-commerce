@@ -41,7 +41,7 @@ const NavBar = ()=>{
                 </div>
                 <div className='links'>
                     <ul>
-                        <Link to='/' ><li>home</li></Link>
+                        <Link to='/'><li>home</li></Link>
                         <Link to='/shop'><li>shop</li></Link>
                         {/* <li>about</li>
                     <li>contact</li> */}
@@ -61,9 +61,9 @@ const NavBar = ()=>{
 
             <div className={show ? "mobile-menu show" : "mobile-menu"} ref={dropMenu}>
                 <ul>
-                    <Link to='/' ><li>home</li></Link>
-                    <Link to='/shop'><li>shop</li></Link>
-                    <Link to='/login'><li>login / register</li></Link>
+                    <Link to='/' onClick={()=>setShow(!show)}><li>home</li></Link>
+                    <Link to='/shop' onClick={()=>setShow(!show)}><li>shop</li></Link>
+                    <Link to='/login' onClick={()=>setShow(!show)}><li>login / register</li></Link>
                 </ul>
             </div>
         </>

@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import "../css/Product.css"
 import { addItem } from "../slices/cartSlice"
 import { useDispatch } from "react-redux";
+import FloatingCart from "../components/FloatingCart";
 
 const Product = () => {
     const { id } = useParams()
@@ -35,6 +36,7 @@ const Product = () => {
                     <button onClick={()=>dispatch(addItem(prod))}>ADD TO CART</button>
                 </div>
             </div>))}
+            <FloatingCart size={30} color='white'/>
         </div>
     );
 }

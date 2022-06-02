@@ -1,0 +1,26 @@
+.floating-cart-container{
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    background-color: black;
+    padding: 10px;
+    border-radius: 100%;
+}
+.cart-count{
+    background-color: #23A6F0;
+    border-radius: 100%;
+    z-index: 15;
+    position: absolute;
+    color: white;
+    top: -13px;
+    /* width: 20px; */
+    right: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 3px 8px;
+}
+@media only screen and (min-width: 626px) {
+   .floating-cart-container{
+       display: none;
+   }
+}

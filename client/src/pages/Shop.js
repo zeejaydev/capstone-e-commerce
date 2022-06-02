@@ -2,6 +2,7 @@ import "../css/Shop.css";
 import { Link } from "react-router-dom";
 import { useEffect,useState } from "react";
 import { ReactComponent as Icon } from "../assets/images/icons/loading.svg";
+import FloatingCart from "../components/FloatingCart";
 
 
 const Shop = () => {
@@ -73,6 +74,7 @@ const Shop = () => {
                         </div>
                     </Link>))}
                 </div>
+                <FloatingCart size={30} color='white'/>
             </div>
         }
         </>
