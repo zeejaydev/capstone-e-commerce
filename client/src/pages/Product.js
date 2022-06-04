@@ -9,9 +9,10 @@ const Product = () => {
     const { id } = useParams()
     const [item,setItem] = useState()
     const dispatch = useDispatch()
+    const env = process.env.NODE_ENV === "development" ? "http://localhost:3000":""
 
     useEffect(()=>{
-        fetch(`/api/get/${id}`)
+        fetch(`${env}/api/get/${id}`)
         .then(resp=>resp.json())
         .then(data=>setItem(data))
         .catch(e=>console.log(e))
@@ -19,7 +20,7 @@ const Product = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
     return (
-        <div className="product-container">
+        <div className="container">
             {item&&item.map((prod,i)=>(<div key={i} className="product">
                 <div className="product-img">
                     <img src={prod.image} alt="pic" />

@@ -1,8 +1,3 @@
-.product-container{
-    max-width: 1024px;
-    margin: 20px auto;
-
-}
 .product{
     display: flex;
     justify-content: flex-start;

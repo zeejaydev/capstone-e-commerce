@@ -8,6 +8,7 @@ import Product from "./pages/Product";
 import Login from "./pages/Login";
 import { store } from './store'
 import { Provider } from "react-redux"
+import Checkout from "./pages/Checkout";
 function App() {
   return (
     <Router>
@@ -19,6 +20,7 @@ function App() {
           <Route path="/shop/product/:id" element={<Product/>}></Route>
           <Route path="/admin" element={<Product/>}></Route>
           <Route path="/login" element={<Login/>}></Route>
+          <Route path="/checkout" element={<Checkout/>}></Route>
         </Routes>
         <Footer/>
       </Provider>

@@ -50,7 +50,7 @@ const NavBar = ()=>{
                 <div className='login'>
                     <ul>
                         {user?<li>{user.email}</li>:<Link to='/login'><li><BiUser size={16} /> login / register</li></Link>}
-                        <Link to='/'><li><BsCart size={16} /> {cartItems} </li></Link>
+                        <Link to='/checkout'><li><BsCart size={19} /> {cartItems} </li></Link>
                     </ul>
                 </div>
                 <div className="mobile-toggle">

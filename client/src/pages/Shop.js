@@ -10,10 +10,11 @@ const Shop = () => {
     const [filter,setFilter] = useState('');
     const [loading,setLoading] = useState(false);
     const [reset,setReset] = useState(true);
+    const env = process.env.NODE_ENV === "development" ? "http://localhost:3000":""
 
     useEffect(() => {
         setLoading(true)
-        fetch(`/api/allProducts`)
+        fetch(`${env}/api/allProducts`)
             .then(res=>res.json())
             .then(data=>{
                 setProds(data)
@@ -22,12 +23,12 @@ const Shop = () => {
                 console.log(e)
                 setLoading(false)
             })
-    }, [reset]);
+    }, [reset,env]);
     
     useEffect(()=>{
         setLoading(true)
         if(filter==='')return
-        fetch(`/api/sortProducts/${filter}`)
+        fetch(`${env}/api/sortProducts/${filter}`)
             .then(res=>res.json())
             .then(data=>{
                 setProds(data)
@@ -36,7 +37,7 @@ const Shop = () => {
                 console.log(e)
                 setLoading(false)
             })
-    },[filter])
+    },[filter,env])
 
     const handleReset = ()=>{
         setReset(!reset)
