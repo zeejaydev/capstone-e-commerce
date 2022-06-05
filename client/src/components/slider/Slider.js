@@ -33,7 +33,7 @@ const Slider = () => {
         const play = () => {
             autoPlayRef.current()
         }
-        const interval = setInterval(play, 8000)
+        const interval = setInterval(play, 4000)
         return () => clearInterval(interval)
     }, [mouseOver])
 

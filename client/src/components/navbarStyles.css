@@ -6,6 +6,10 @@ nav{
     display: flex;
     padding: 0 10px;
     align-items: baseline;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: white;
 }
 nav ul{
     display: flex;
@@ -24,6 +28,9 @@ nav ul li:hover{
 }
 .logo{
     flex: 1/2;
+}
+.login{
+    position: relative;
 }
 .login li{
     color: #23A6F0;

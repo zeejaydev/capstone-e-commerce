@@ -102,3 +102,8 @@
     text-transform: capitalize;
     font-weight: 600;
 }
+@media only screen and (max-width: 768px) {
+    .checkout-container{
+        flex-direction: column;
+    }
+}

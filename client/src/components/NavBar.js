@@ -5,12 +5,14 @@ import { BiUser, BiMenuAltRight } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
 import { useState, useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
+import CartPopup from "./cartPopup/CartPopup";
 
 
 const NavBar = ()=>{
     const [ show,setShow ] = useState(false);
     const dropMenu = useRef()
-    const cartItems = useSelector((state) => state.cart.length)
+    const cartItems = useSelector((state) => state.cart)
+
     const [user,setUser] = useState(null)
     useEffect(()=>{
         const id = sessionStorage.getItem('id')
@@ -50,8 +52,9 @@ const NavBar = ()=>{
                 <div className='login'>
                     <ul>
                         {user?<li>{user.email}</li>:<Link to='/login'><li><BiUser size={16} /> login / register</li></Link>}
-                        <Link to='/checkout'><li><BsCart size={19} /> {cartItems} </li></Link>
+                        <Link to='/checkout'><li><BsCart size={19} /> {cartItems.count} </li></Link>
                     </ul>
+                    <CartPopup/>
                 </div>
                 <div className="mobile-toggle">
                     {show ? <AiOutlineClose size={32} /> : <BiMenuAltRight size={32} onClick={() => setShow(!show)} />}

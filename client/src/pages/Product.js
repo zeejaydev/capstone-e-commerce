@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import "../css/Product.css"
-import { addItem } from "../slices/cartSlice"
+import "../css/Product.css";
+import { addItem } from "../slices/cartSlice";
+import { show } from "../slices/cartPopSlice";
 import { useDispatch } from "react-redux";
 import FloatingCart from "../components/FloatingCart";
 
@@ -34,7 +35,10 @@ const Product = () => {
                             ipsum dolorem voluptatibus deleniti. Iste, fuga.
                         </p>
                     </div>
-                    <button onClick={()=>dispatch(addItem(prod))}>ADD TO CART</button>
+                    <button onClick={()=>{
+                        dispatch(addItem(prod))
+                        dispatch(show())
+                    }}>ADD TO CART</button>
                 </div>
             </div>))}
             <FloatingCart size={30} color='white'/>
