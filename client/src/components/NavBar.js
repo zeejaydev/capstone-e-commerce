@@ -12,14 +12,15 @@ const NavBar = ()=>{
     const [ show,setShow ] = useState(false);
     const dropMenu = useRef()
     const cartItems = useSelector((state) => state.cart)
+    const env = process.env.NODE_ENV === "development" ? "http://localhost:3000":""
 
     const [user,setUser] = useState(null)
     useEffect(()=>{
         const id = sessionStorage.getItem('id')
         if(id){
-            fetch(`/api/getUser/${id}`).then(resp=>resp.json()).then(res=>setUser(res))
+            fetch(`${env}/api/getUser/${id}`).then(resp=>resp.json()).then(res=>setUser(res))
         }
-    },[])
+    },[env])
 
     useEffect(() => {
         const checkIfClickedOutside = e => {

@@ -14,7 +14,6 @@ const users = mongoose.Schema(
         },
         role: {
             type:String,
-            required:[true,"role is required"]
         },
     }
 )

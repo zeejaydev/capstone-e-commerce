@@ -1,0 +1,35 @@
+.modal-background{
+    display: none;
+    position: fixed;
+    top: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: rgb(0, 0, 0,0.7);
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+}
+.modal{
+    background-color: white;
+    max-height: 40vh;
+    max-width: 40vw;
+    border-radius: 8px;
+    padding: 20px;
+}
+.modal h2 {
+    text-align: center;
+}
+.modal p {
+    text-transform: capitalize;
+}
+.show-modal{
+    display: flex;
+}
+.modal-button{
+    float: right;
+    background-color: black;
+    color: white;
+    padding: 5px 20px;
+    font-weight: 600;
+    cursor: pointer;
+}

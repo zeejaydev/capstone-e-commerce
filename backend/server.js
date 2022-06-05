@@ -5,7 +5,7 @@ require("dotenv").config();
 const connectDB = require('./config/db');
 const session = require('express-session');
 const { getProducts,sortProducts,getItem } = require("./controllers/productsController");
-const { createUser, signIn, getUser } = require("./controllers/usersController");
+const { createUser, signIn, getUser, signUp } = require("./controllers/usersController");
 const { isAdmin } = require("./middlewares/isAdmin");
 
 connectDB()
@@ -25,6 +25,7 @@ app.get('/api/sortProducts/:sort',sortProducts);
 app.get('/api/get/:id',getItem);
 app.post('/api/register',createUser);
 app.post('/api/signin',signIn);
+app.post('/api/signup',signUp);
 app.get('/api/getUser/:id',getUser);
 
 app.use(express.static(path.join(__dirname,"../client/build")));
