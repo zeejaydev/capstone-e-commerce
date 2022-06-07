@@ -40,11 +40,11 @@ const Admin = () => {
         formData.append("file", file, file.name);
 
         if(file.type === "image/jpeg" || file.type==="image/png" || file.type==="image/jpg"){
-            fetch(`${env}/api/imageUpload`,{
+            fetch(`/api/imageUpload`,{
                 method: 'POST',
                 body: formData,
              }).then(res=>res.json()).then(data=>{
-                setUrl(`${env}/api/uploads/${data.url}`)
+                setUrl(`/api/uploads/${data.url}`)
              })
         }else{
             alert("file must be an image") 
