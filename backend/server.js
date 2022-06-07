@@ -11,7 +11,7 @@ const multer = require('multer');
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, '../client/uploads')
+        cb(null, './uploads')
     },
     filename: function (req, file, cb) {
         const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
@@ -65,7 +65,7 @@ app.get('/api/getUser/:id',getUser);
 
 app.use(express.static(path.join(__dirname,"../client/build")));
 app.get('/api/uploads/:name', (req, res) => {
-	res.sendFile(path.join(__dirname,'../client/uploads/'+req.params.name));
+	res.sendFile(path.join(__dirname,'../uploads/'+req.params.name));
 });
 app.get('/admin',isAdmin,(req,res)=>res.sendFile(path.resolve(__dirname,"../","client","build","index.html")))
 app.get('*',(req,res)=>res.sendFile(path.resolve(__dirname,"../","client","build","index.html")));
