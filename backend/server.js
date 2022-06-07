@@ -62,7 +62,10 @@ app.delete('/api/deleteItem/:id',deleteItem);
 app.post('/api/signin',signIn);
 app.post('/api/signup',signUp);
 app.get('/api/getUser/:id',getUser);
-
+app.get('/api/signOut',(req,res)=>{
+	req.session.destroy()
+	res.status(200).json({message:'log out'})
+})
 app.use(express.static(path.join(__dirname,"../client/build")));
 app.get('/api/uploads/:name', (req, res) => {
 	res.sendFile(path.join(__dirname,'../uploads/'+req.params.name));

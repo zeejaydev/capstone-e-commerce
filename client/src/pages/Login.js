@@ -40,7 +40,7 @@ const Login = () => {
             }
             if(data){
                 sessionStorage.setItem('id',`${data.id}`)
-                dispatch(setUser(data.email))
+                dispatch(setUser(data))
                 navigate("/")
             }
         })

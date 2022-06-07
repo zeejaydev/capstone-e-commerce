@@ -6,16 +6,17 @@ import { AiOutlineClose } from "react-icons/ai";
 import { useState, useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
 import CartPopup from "./cartPopup/CartPopup";
-
+import { useNavigate } from "react-router-dom";
 
 const NavBar = ()=>{
+    const navigate = useNavigate();
     const [ show,setShow ] = useState(false);
     const dropMenu = useRef()
     const cartItems = useSelector((state) => state.cart)
     const email = useSelector((state) => state.user)
     const env = process.env.NODE_ENV === "development" ? "http://localhost:3000":""
 
-    const [user,setUser] = useState(null)
+    const [user,setUser] = useState({})
     useEffect(()=>{
         const id = sessionStorage.getItem('id')
         if(id){
@@ -35,8 +36,12 @@ const NavBar = ()=>{
         }
     }, [show])
 
-
-
+    const handleSignOut = ()=>{
+        fetch(`${env}/api/signOut`).then(resp=>resp.json()).then(res=>{
+            sessionStorage.clear()
+            window.location.reload();
+        }).catch(e=>console.log(e))
+    }
     return(
         <>
             <nav>
@@ -47,13 +52,16 @@ const NavBar = ()=>{
                     <ul>
                         <Link to='/'><li>home</li></Link>
                         <Link to='/shop'><li>shop</li></Link>
-                        {/* <li>about</li>
-                    <li>contact</li> */}
+                        { user.role==='admin'|| email.role==='admin'?<>
+                        <Link to='/admin'><li>admin</li></Link>
+                        <li onClick={handleSignOut} style={{cursor:'pointer'}}>Sign out</li>
+                        </>:''}
+                        
                     </ul>
                 </div>
                 <div className='login'>
                     <ul>
-                        {user?<li>Welcome {user.email}</li>: email?<li>Welcome {email}</li>:<Link to='/login'><li><BiUser size={16} /> login / register</li></Link>}
+                        {user.email?<li>Welcome {user.email}</li>: email.email?<li>Welcome {email.email}</li>:<Link to='/login'><li><BiUser size={16} /> login / register</li></Link>}
                         <Link to='/checkout'><li><BsCart size={19} /> {cartItems.count} </li></Link>
                     </ul>
                     <CartPopup/>
