@@ -13,6 +13,7 @@ import Men from "./pages/Men";
 import Women from "./pages/Women";
 import Accessories from "./pages/Accessories";
 import Kids from "./pages/Kids";
+import Admin from "./pages/Admin";
 function App() {
   return (
     <Router>
@@ -22,7 +23,7 @@ function App() {
           <Route path="/" element={<Home/>}></Route>
           <Route path="/shop" element={<Shop/>}></Route>
           <Route path="/shop/product/:id" element={<Product/>}></Route>
-          <Route path="/admin" element={<Product/>}></Route>
+          <Route path="/admin" element={<Admin/>}></Route>
           <Route path="/login" element={<Login/>}></Route>
           <Route path="/checkout" element={<Checkout/>}></Route>
           <Route path="/men" element={<Men/>}></Route>

@@ -13,13 +13,11 @@ export const popupSlice = createSlice({
             if(state.show){
                 return
             }
-            if(state.show===''){
-                return
-            }
+            
             state.show = true
         },
         hide: (state) => {
-            state.show = ''
+            state.show = false
         },
     }
 })

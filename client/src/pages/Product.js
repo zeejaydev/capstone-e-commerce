@@ -30,9 +30,7 @@ const Product = () => {
                     <div>
                         <h2>{prod.title}</h2>
                         <h2>${prod.price}</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque ad officia illo nostrum, 
-                            commodi et tempore autem dolor dolore exercitationem recusandae quia nihil consectetur 
-                            ipsum dolorem voluptatibus deleniti. Iste, fuga.
+                        <p>{prod.desc}
                         </p>
                     </div>
                     <button onClick={()=>{

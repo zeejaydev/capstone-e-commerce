@@ -18,19 +18,19 @@ const Footer = ()=>{
                 <ul>
                     <h3>Company Info</h3>
                     <li>About Us</li>
-                    <li>Carrier</li>
+                    <li>Careers</li>
                     <li>Blog</li>
                 </ul>
                 <ul>
                     <h3>Legal</h3>
                     <li>About Us</li>
-                    <li>Carrier</li>
+                    <li>Careers</li>
                     <li>Blog</li>
                 </ul>
                 <ul>
                     <h3>Resources</h3>
                     <li>About Us</li>
-                    <li>Carrier</li>
+                    <li>Careers</li>
                     <li>Blog</li>
                 </ul>
                 <ul>

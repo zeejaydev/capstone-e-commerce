@@ -3,11 +3,15 @@ import {AiOutlineMail,AiTwotoneLock} from "react-icons/ai"
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Modal from "../components/modal/Modal";
+import { useDispatch } from "react-redux";
+import { setUser } from "../slices/userSlice";
+const env = process.env.NODE_ENV === "development" ? "http://localhost:3000":""
 
 const Login = () => {
     const [fieldValues,setFieldValues] = useState({})
     const navigate = useNavigate();
     const [errorMessage,setErrorMessage] = useState({show:false,errorMessage:''})
+    const dispatch = useDispatch()
     const handleEmailChange = (e)=>{
         const value = e.target.value;
         setFieldValues({...fieldValues,email:value})
@@ -16,7 +20,7 @@ const Login = () => {
         const value = e.target.value;
         setFieldValues({...fieldValues,password:value})
     }
-    const env = process.env.NODE_ENV === "development" ? "http://localhost:3000":""
+
     const handleSignIn= ()=>{
         if(!fieldValues.email){
             return setErrorMessage({show:true,errorMessage:"email is required"})
@@ -36,6 +40,7 @@ const Login = () => {
             }
             if(data){
                 sessionStorage.setItem('id',`${data.id}`)
+                dispatch(setUser(data.email))
                 navigate("/")
             }
         })

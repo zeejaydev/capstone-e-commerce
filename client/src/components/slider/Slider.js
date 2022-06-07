@@ -10,13 +10,13 @@ const slides = [
         image: Slide1,
         season: 'Summer 2022',
         title: 'new collection',
-        desc: 'We know how large objects will act, but things on a small scale.'
+        desc: 'Labels We Love!'
     },
     {
         image: Slide2,
         season: 'winter 2022',
         title: 'new collection',
-        desc: 'We know how large objects will act, but things on a small scale.'
+        desc: '📸-Perfect Pieces make every occasion your next photo op'
     }
 ]
 const Slider = () => {

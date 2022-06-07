@@ -31,7 +31,7 @@ const Home = ()=>{
             <Slider/>
             <div className="categories">
                 <h2>Editor's Pick</h2>
-                <p>Problems trying to resolve the conflict between</p>
+                <p>Live with Passion</p>
                 <div className="categories-container">
                     {cats.map((cat, i) => (<div key={i} className={cat.title}><img src={cat.bg} alt="mens" className="cat-image" /><Link className="cat-button" to={`/${cat.title}`}>{cat.title}</Link></div>))}
                 </div>
@@ -40,7 +40,7 @@ const Home = ()=>{
                 <div className="email-capture">
                     <h3>Get the Best Deals</h3>
                     <h1>join our list</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, !</p>
+                    <p>UNLOCK 20% OFF</p>
                     <div className="email-input">
                         <BsEnvelope color="black" className="email-icon"/>
                         <input type="text" placeholder="Your Email" className="email-capture-input"/>

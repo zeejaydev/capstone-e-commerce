@@ -18,7 +18,7 @@ const signIn = async(req,res)=>{
     if(user){
         req.session.loggedin = true;
         req.session.username = user._id;
-        res.status(200).json({id:user._id})
+        res.status(200).json({id:user._id,email:user.email})
     }else{
         res.status(401).json({error:"sorry no user was found"})
     }

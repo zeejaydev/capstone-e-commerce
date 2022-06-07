@@ -12,6 +12,7 @@ const NavBar = ()=>{
     const [ show,setShow ] = useState(false);
     const dropMenu = useRef()
     const cartItems = useSelector((state) => state.cart)
+    const email = useSelector((state) => state.user)
     const env = process.env.NODE_ENV === "development" ? "http://localhost:3000":""
 
     const [user,setUser] = useState(null)
@@ -40,7 +41,7 @@ const NavBar = ()=>{
         <>
             <nav>
                 <div className='logo'>
-                    <h1>BrandName</h1>
+                    <h1>House of Fashion</h1>
                 </div>
                 <div className='links'>
                     <ul>
@@ -52,7 +53,7 @@ const NavBar = ()=>{
                 </div>
                 <div className='login'>
                     <ul>
-                        {user?<li>{user.email}</li>:<Link to='/login'><li><BiUser size={16} /> login / register</li></Link>}
+                        {user?<li>Welcome {user.email}</li>: email?<li>Welcome {email}</li>:<Link to='/login'><li><BiUser size={16} /> login / register</li></Link>}
                         <Link to='/checkout'><li><BsCart size={19} /> {cartItems.count} </li></Link>
                     </ul>
                     <CartPopup/>
